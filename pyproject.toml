@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fingpt_trader"
+name = "finverge_ai"
 version = "0.1.0"
-description = "FinGPT Market Inefficiency Detection System"
+description = "FinVerge AI portfolio, sentiment, and risk dashboard"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
@@ -35,6 +35,10 @@ dev = [
 fingpt-trade = "scripts.live_trade:main"
 fingpt-backtest = "scripts.backtest:main"
 fingpt-analyze = "scripts.analyze:main"
+app = "api.main:app"
+
+[tool.vercel.scripts]
+build = "python build.py"
 
 [tool.black]
 line-length = 88

@@ -1294,13 +1294,19 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="FinGPT Trader")
     parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
     parser.add_argument("-q", "--quiet", action="store_true", help="Minimize console output")
-    # Parse command line arguments
-    import argparse
-    parser = argparse.ArgumentParser(description="FinGPT Trader")
-    parser.add_argument("-v", "--verbose", action="store_true", help="Enable verbose output")
-    parser.add_argument("-q", "--quiet", action="store_true", help="Minimize console output")
     parser.add_argument("-mq", "--model-quiet", action="store_true", help="Suppress model initialization output")
+    parser.add_argument("--dashboard", action="store_true", help="Launch the Streamlit web dashboard")
     args = parser.parse_args()
+    
+    # Launch dashboard mode
+    if args.dashboard:
+        import subprocess
+        import os
+        dashboard_path = os.path.join(os.path.dirname(__file__), "dashboard.py")
+        print("🚀 Launching FinGPT Trading Dashboard...")
+        print("   Open http://localhost:8501 in your browser")
+        subprocess.run(["streamlit", "run", dashboard_path, "--server.headless", "true"])
+        sys.exit(0)
     
     # Create and run the trading system
     trading_system = TradingSystem()

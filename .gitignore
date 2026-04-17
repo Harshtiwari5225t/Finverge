@@ -15,6 +15,11 @@ logs/
 
 # Environment variables
 .env
+.env.local
+.vercel/
+
+# macOS
+.DS_Store
 
 # Python
 __pycache__/
@@ -43,6 +48,16 @@ wheels/
 venv/
 env/
 ENV/
+.venv/
+*.tsbuildinfo
+
+# Frontend
+node_modules/
+dist/
+tailwind.config.js
+tailwind.config.d.ts
+vite.config.js
+vite.config.d.ts
 
 # IDE
 .idea/
