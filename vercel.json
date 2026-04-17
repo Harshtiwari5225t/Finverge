@@ -1,6 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "name": "finverge-ai",
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",

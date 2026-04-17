@@ -7,7 +7,7 @@ name = "finverge_ai"
 version = "0.1.0"
 description = "FinVerge AI portfolio, sentiment, and risk dashboard"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.12"
 authors = [
     {name = "Victor Jotham Ashioya", email = "ashioyajotham@icloud.com"}
 ]
