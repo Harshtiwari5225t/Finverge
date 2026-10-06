@@ -1,7 +1,7 @@
 """
 FinGPT Trading System - Production Entry Point
 
-A comprehensive algorithmic trading system leveraging FinGPT for sentiment analysis
+A comprehengfgsive algorithmic trading system leveraging FinGPT for sentiment analysis
 and market inefficiency detection.
 
 Architecture:
